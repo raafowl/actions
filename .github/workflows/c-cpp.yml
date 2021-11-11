@@ -21,4 +21,5 @@ jobs:
       run: |
         cl /c main.c /Fo:main.obj
         link main.obj /OUT:main.exe
+        main.exe
         dir
