@@ -10,9 +10,10 @@ jobs:
   build:
 
     runs-on: windows-latest
-#     defaults:
-#       run:
-#         shell: cmd
+    defaults:
+      run:
+        shell: cmd
+        working-directory: .
 
     steps:
     - uses: actions/checkout@v2
