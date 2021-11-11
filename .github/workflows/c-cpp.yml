@@ -1,0 +1,23 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: cmd
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: compile
+      run: |
+        cl /c main.c /Fo:main.obj
+        link main.obj /OUT:main.exe
+        nmake
