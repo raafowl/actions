@@ -21,4 +21,4 @@ jobs:
       run: |
         cl /c main.c /Fo:main.obj
         link main.obj /OUT:main.exe
-        nmake | ver 1> 2> null
+        nmake | ver 1> nil 2> nil
