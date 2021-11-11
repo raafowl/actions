@@ -17,7 +17,8 @@ jobs:
     strategy:
       matrix:
         arch:
-          - amd64_arm
+          - x64
+          - x86_arm
 
     steps:
     - uses: actions/checkout@v2
