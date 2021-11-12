@@ -24,6 +24,8 @@ jobs:
 #         main.exe
 #         dir
     - uses: egor-tensin/setup-mingw@v2
+      with:
+        platform: x64
     - name: compile 2
       run: |
         gcc -c main.c -o main.o
