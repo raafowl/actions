@@ -29,3 +29,11 @@ jobs:
         link main.obj /OUT:main.exe
         main.exe
         dir
+    - uses: egor-tensin/setup-mingw@v2
+    - name: compile 2
+      run: |
+        gcc -c main.c -o main.o
+        gcc main.o - main.exe
+        main.exe
+        dir
+        mingw-w64-x86_64-make
