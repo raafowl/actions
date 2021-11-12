@@ -23,10 +23,22 @@ jobs:
 #         link main.obj /OUT:main.exe
 #         main.exe
 #         dir
-    - uses: egor-tensin/setup-mingw@v2
+#     - uses: egor-tensin/setup-mingw@v2
+#       with:
+#         platform: x64
+#     - name: compile 2
+#       run: |
+#         gcc -c main.c -o main.o
+#         gcc main.o -o main.exe
+#         main.exe
+#         dir
+#         mingw32-make --help
+    - uses: msys2/setup-msys2@v2
       with:
-        platform: x64
-    - name: compile 2
+        msystem: mingw32
+        update: true
+        install: mingw-w64-i686-make
+    - name: compile x86
       run: |
         gcc -c main.c -o main.o
         gcc main.o -o main.exe
