@@ -33,9 +33,9 @@ jobs:
 #         main.exe
 #         dir
 #         mingw32-make --help
-    - uses: msys2/setup-msys2@v2
-      with:
-        msystem: mingw32
+#     - uses: msys2/setup-msys2@v2
+#       with:
+#         msystem: mingw32
 #         update: true
 #         install: mingw-w64-i686-make
     - name: compile x86
@@ -43,5 +43,3 @@ jobs:
         gcc -c main.c -o main.o
         gcc main.o -o main.exe
         main.exe
-        dir
-        mingw32-make --help
