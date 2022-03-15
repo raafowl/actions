@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     defaults:
       run:
         shell: cmd
@@ -43,3 +43,4 @@ jobs:
         gcc -c main.c -o main.o
         gcc main.o -o main.exe
         main.exe
+        docker ps -a
