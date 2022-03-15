@@ -41,6 +41,5 @@ jobs:
     - name: compile x86
       run: |
         gcc -c main.c -o main.o
-        gcc main.o -o main.exe
-        main.exe
+        gcc main.o -o main
         docker ps -a
